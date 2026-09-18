@@ -9,6 +9,7 @@ coverage/
 # TypeScript and bundler caches
 *.tsbuildinfo
 .vite/
+.eslintcache
 
 # Environment files
 .env
