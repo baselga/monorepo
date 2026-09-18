@@ -13,11 +13,13 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./styles": "./dist/index.css"
   },
   "scripts": {
     "build": "tsc -b && vite build",
     "dev": "vite build --watch",
+    "typecheck": "tsc -b --noEmit",
     "test": "vitest",
     "test:run": "vitest run"
   },

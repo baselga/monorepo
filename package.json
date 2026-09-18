@@ -7,18 +7,18 @@
     "apps/*"
   ],
   "scripts": {
-    "dev:ui": "npm run dev --workspace=@my-project/ui-dev",
-
+    "dev:ui": "npm run dev --workspace=@monorepo/ui-dev",
+    "dev:ui-lib": "npm run dev --workspace=@monorepo/ui",
+    "dev": "concurrently -n lib,app -c magenta,cyan \"npm:dev:ui-lib\" \"npm:dev:ui\"",
     "build": "npm run build --workspaces",
-    "typecheck": "npm run typecheck --workspaces",
-    "test": "npm run test --workspaces",
-    "lint": "npm run lint --workspaces"
+    "typecheck": "npm run typecheck --workspaces"
   },
   "engines": {
-    "node": ">=20.19.0",
-    "npm": ">=10"
+    "node": ">=v24.15.0",
+    "npm": ">=11"
   },
   "devDependencies": {
+    "concurrently": "^10.0.5",
     "typescript": "^5.9.0"
   }
 }
