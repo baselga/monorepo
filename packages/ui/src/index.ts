@@ -1,3 +1,3 @@
-import './tokens/index.css';
+import "./tokens/index.css";
 
-export { Button } from './componets/Button/Button';
+export { Button } from "./components/Button/Button";
