@@ -11,7 +11,7 @@
     "dev:ui-lib": "npm run dev --workspace=@monorepo/ui",
     "dev": "concurrently -n lib,app -c magenta,cyan \"npm:dev:ui-lib\" \"npm:dev:ui\"",
     "build": "npm run build --workspaces",
-    "typecheck": "npm run typecheck --workspaces",
+    "typecheck": "tsc -b",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
     "format": "prettier --write .",
