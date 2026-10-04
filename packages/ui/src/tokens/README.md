@@ -1,4 +1,38 @@
-# Tokens de color
+# Tokens
+
+## Espaciado
+
+Los tokens `--space-*` definen una escala de base 4 px (asumiendo una raíz de 16 px):
+
+| Token        | Valor     | Equivalencia |
+| ------------ | --------- | ------------ |
+| `--space-0`  | `0`       | 0 px         |
+| `--space-1`  | `0.25rem` | 4 px         |
+| `--space-2`  | `0.5rem`  | 8 px         |
+| `--space-3`  | `0.75rem` | 12 px        |
+| `--space-4`  | `1rem`    | 16 px        |
+| `--space-6`  | `1.5rem`  | 24 px        |
+| `--space-8`  | `2rem`    | 32 px        |
+| `--space-12` | `3rem`    | 48 px        |
+| `--space-16` | `4rem`    | 64 px        |
+
+Usar estos tokens para márgenes, padding, gaps y dimensiones de separación. Los saltos en la numeración evitan proliferar variantes y dejan espacio para ampliar la escala si hace falta.
+
+## Radios
+
+Los tokens `--radius-*` definen la escala de redondeo de esquinas:
+
+| Token           | Valor     | Equivalencia | Uso sugerido                    |
+| --------------- | --------- | ------------ | ------------------------------- |
+| `--radius-none` | `0`       | 0 px         | Esquinas rectas                 |
+| `--radius-sm`   | `0.25rem` | 4 px         | Controles compactos             |
+| `--radius-md`   | `0.5rem`  | 8 px         | Componentes estándar            |
+| `--radius-lg`   | `0.75rem` | 12 px        | Superficies con más presencia   |
+| `--radius-full` | `9999px`  | —            | Píldoras y elementos circulares |
+
+Usar estos tokens para `border-radius` en componentes y superficies.
+
+## Colores
 
 Dos capas:
 
