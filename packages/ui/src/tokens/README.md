@@ -32,6 +32,36 @@ Los tokens `--radius-*` definen la escala de redondeo de esquinas:
 
 Usar estos tokens para `border-radius` en componentes y superficies.
 
+## Elevación
+
+Los tokens `--shadow-*` definen una escala de sombras con un color adaptado al tema:
+
+| Token         | Uso sugerido                                |
+| ------------- | ------------------------------------------- |
+| `--shadow-sm` | Controles y superficies con elevación sutil |
+| `--shadow-md` | Menús y popovers                            |
+| `--shadow-lg` | Diálogos y superficies de mayor elevación   |
+
+## Movimiento
+
+Los tokens `--duration-*` definen duraciones y `--ease-*` curvas para transiciones y animaciones. Usar `fast` para estados de controles, `standard` para cambios habituales y `slow` para movimientos más visibles. Con `prefers-reduced-motion: reduce`, las duraciones pasan a `0ms`.
+
+## Capas
+
+Los tokens `--z-*` ordenan elementos superpuestos. Los valores dejan intervalos para ampliar la escala si aparecen nuevas capas:
+
+| Token          | Valor | Uso sugerido       |
+| -------------- | ----- | ------------------ |
+| `--z-base`     | 0     | Contenido normal   |
+| `--z-sticky`   | 10    | Elementos sticky   |
+| `--z-dropdown` | 20    | Menús y dropdowns  |
+| `--z-overlay`  | 30    | Fondos de overlays |
+| `--z-modal`    | 40    | Diálogos y modales |
+| `--z-toast`    | 50    | Notificaciones     |
+| `--z-tooltip`  | 60    | Tooltips           |
+
+Los niveles no escapan de un _stacking context_ ancestro; mantener relacionados los elementos que necesitan compartir orden.
+
 ## Colores
 
 Dos capas:
