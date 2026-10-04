@@ -1,5 +1,36 @@
 # Tokens
 
+## Tipografía
+
+Los tokens `--font-*` definen familias, tamaños y pesos; `--line-height-*` define las alturas de línea. Los tamaños usan `rem` con una raíz de 16 px:
+
+| Token             | Valor      | Equivalencia |
+| ----------------- | ---------- | ------------ |
+| `--font-size-xs`  | `0.75rem`  | 12 px        |
+| `--font-size-sm`  | `0.875rem` | 14 px        |
+| `--font-size-md`  | `1rem`     | 16 px        |
+| `--font-size-lg`  | `1.125rem` | 18 px        |
+| `--font-size-xl`  | `1.25rem`  | 20 px        |
+| `--font-size-2xl` | `1.5rem`   | 24 px        |
+| `--font-size-3xl` | `1.875rem` | 30 px        |
+| `--font-size-4xl` | `2.25rem`  | 36 px        |
+| `--font-size-5xl` | `3rem`     | 48 px        |
+
+Las familias sans y mono usan stacks del sistema. Los pesos disponibles son `regular` (400), `medium` (500), `semibold` (600) y `bold` (700). Las alturas de línea son `tight` (1.2), `snug` (1.35), `normal` (1.5) y `relaxed` (1.65).
+
+Los tokens `--type-*` son shorthands CSS para roles comunes:
+
+| Token               | Composición          | Uso sugerido                 |
+| ------------------- | -------------------- | ---------------------------- |
+| `--type-caption`    | regular, xs, normal  | Metadatos y ayudas           |
+| `--type-body`       | regular, md, normal  | Párrafos y contenido general |
+| `--type-label`      | medium, sm, snug     | Labels y controles           |
+| `--type-heading-sm` | semibold, xl, snug   | Encabezados de sección       |
+| `--type-heading-md` | semibold, 2xl, tight | Encabezados de página        |
+| `--type-heading-lg` | bold, 3xl, tight     | Títulos principales          |
+
+Aplicar los roles con la propiedad `font`, por ejemplo `font: var(--type-body)`. Para necesidades específicas, combinar los tokens base en vez de añadir variantes por componente.
+
 ## Espaciado
 
 Los tokens `--space-*` definen una escala de base 4 px (asumiendo una raíz de 16 px):

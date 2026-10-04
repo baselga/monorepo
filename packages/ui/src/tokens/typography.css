@@ -1,0 +1,41 @@
+:root {
+  --font-family-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-family-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    monospace;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  --type-caption: var(--font-weight-regular) var(--font-size-xs) /
+    var(--line-height-normal) var(--font-family-sans);
+  --type-body: var(--font-weight-regular) var(--font-size-md) /
+    var(--line-height-normal) var(--font-family-sans);
+  --type-label: var(--font-weight-medium) var(--font-size-sm) /
+    var(--line-height-snug) var(--font-family-sans);
+  --type-heading-sm: var(--font-weight-semibold) var(--font-size-xl) /
+    var(--line-height-snug) var(--font-family-sans);
+  --type-heading-md: var(--font-weight-semibold) var(--font-size-2xl) /
+    var(--line-height-tight) var(--font-family-sans);
+  --type-heading-lg: var(--font-weight-bold) var(--font-size-3xl) /
+    var(--line-height-tight) var(--font-family-sans);
+}
