@@ -97,7 +97,7 @@ Los niveles no escapan de un _stacking context_ ancestro; mantener relacionados 
 
 Dos capas:
 
-- **Primitivas** ([colors.css](colors.css)): escalas `--color-mist-*`, `--color-teal-*`, `--color-amber-*`.
+- **Primitivas** ([colors.css](colors.css)): escalas `--color-neutral-*`, `--color-primary-*`, `--color-secondary-*`.
 - **Semánticas** ([palette.css](palette.css)): `--bg-*`, `--text-*`, `--border-*`. Soportan modo claro y oscuro con `light-dark()`.
 
 Los componentes usan solo tokens semánticos, nunca `--color-*` directamente.
