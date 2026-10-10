@@ -112,7 +112,7 @@
     }
   }
 
-  &[aria-busy="true"]::before {
+  &[data-pending]::before {
     content: "";
     display: inline-block;
     width: 1em;
@@ -126,7 +126,7 @@
   @media (prefers-reduced-motion: reduce) {
     transition: none;
 
-    &[aria-busy="true"]::before {
+    &[data-pending]::before {
       animation-duration: 1.5s;
     }
   }

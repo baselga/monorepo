@@ -31,7 +31,7 @@ export const Button = ({
       data-variant={variant}
       data-size={size}
       isDisabled={loading || isDisabled}
-      aria-busy={loading || undefined}
+      isPending={loading}
     >
       {children}
     </RACButton>
