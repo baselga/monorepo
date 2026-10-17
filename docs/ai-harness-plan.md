@@ -13,7 +13,7 @@ Objetivo: que un agente entienda el repo con el mínimo de lecturas, siga las co
 
 - npm workspaces: `apps/ui-dev` (Vite, playground) y `packages/ui` (`@monorepo/ui`: React 19, react-aria-components, CVA, CSS Modules, tokens CSS, Vitest).
 - Calidad: ESLint strict, Prettier, `tsc -b`, husky (pre-commit con lint-staged; pre-push con lint, format, typecheck y build).
-- Las fases 1, 2 y 3 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code, documentación técnica compacta y skills propias/de terceros versionadas. CI sigue fuera del alcance actual.
+- Las fases 1, 2, 3 y 4 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code, documentación técnica compacta, skills propias/de terceros versionadas, scripts de verificación concisos y hooks de agente. CI sigue fuera del alcance actual.
 - Solo existe un componente (Button) con un test: buen momento para fijar patrones.
 
 ## Fase 1 – Contexto base (impacto alto, esfuerzo bajo) — Completada
@@ -65,12 +65,12 @@ Para más adelante: `code-review` (lanza subagentes, cuesta tokens), `improve-co
 
 Descartadas por ahora (asumen issue tracker y flujo de specs): `triage`, `to-spec`, `to-tickets`, `implement`, `implement-spec`, `wayfinder`, además de `prototype`, `research`, `wizard`, `teach`, `to-questionnaire` y `ask-matt`.
 
-## Fase 4 – Ahorro de tokens en la ejecución
+## Fase 4 – Ahorro de tokens en la ejecución — Completada
 
 - Scripts en la raíz con salida mínima: `check` (lint + typecheck + test), `test:ui` y `lint:changed` (eslint solo sobre ficheros modificados).
 - Reporters silenciosos: Vitest con reporter `dot`, `tsc --pretty false`, builds sin logs verbosos.
 - Hooks de agente que bloqueen la lectura de ficheros de ruido y ejecuten prettier y eslint tras editar.
-- Estructura y nombres predecibles (barrel `index.ts`, una carpeta por componente) para localizar sin buscar.
+- Estructura y nombres predecibles (barrel `index.ts`, una carpeta por componente) para localizar sin buscar, establecida en las guías de los workspaces.
 
 ## Fase 5 – Verificación y feedback loop (sin CI)
 

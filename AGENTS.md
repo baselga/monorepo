@@ -7,6 +7,9 @@
 
 ## Comandos de verificación
 
+- Verificación completa: `npm run check` (lint, typecheck y tests).
+- Tests de la biblioteca: `npm run test:ui`.
+- Lint de ficheros cambiados: `npm run lint:changed`.
 - Tests de la biblioteca: `npm run test:run -w @monorepo/ui`.
 - Typecheck del monorepo: `npm run typecheck`.
 - Lint de los ficheros modificados: `npx eslint <ficheros>`.
