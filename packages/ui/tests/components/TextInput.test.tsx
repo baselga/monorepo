@@ -31,6 +31,22 @@ describe("TextInput", () => {
     expect(input).toHaveAttribute("data-variant", "underline");
   });
 
+  it("renders optional icons at the start and end of the input", () => {
+    render(
+      <TextInput
+        aria-label="Buscar"
+        endIcon={<span data-testid="end-icon">Limpiar</span>}
+        startIcon={<span data-testid="start-icon">Buscar</span>}
+      />,
+    );
+
+    expect(screen.getByTestId("start-icon")).toBeInTheDocument();
+    expect(screen.getByTestId("end-icon")).toBeInTheDocument();
+    expect(screen.getByRole("textbox", { name: "Buscar" })).toHaveAttribute(
+      "data-has-icons",
+    );
+  });
+
   it("accepts text input", async () => {
     const user = userEvent.setup();
     render(<TextInput aria-label="Nombre" />);
