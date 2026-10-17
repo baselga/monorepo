@@ -80,12 +80,10 @@ Descartadas por ahora (asumen issue tracker y flujo de specs): `triage`, `to-spe
 - Opcional y pendiente: una página por componente en `apps/ui-dev` y un smoke test con Playwright para validar la UI visualmente.
 - Si más adelante se decide usar CI, reutilizar `check` tal cual.
 
-## Fase 6 – Mantenimiento
+## Fase 6 – Mantenimiento (proceso implementado; medición pendiente)
 
-- Si un agente se equivoca dos veces en lo mismo, añadir una línea a `AGENTS.md` o a una skill.
-- Ejecutar `retro` tras sesiones relevantes y aplicar solo las mejoras de mayor severidad.
-- Revisión periódica para recortar lo obsoleto: el contexto sobrante cuesta tokens.
-- Medir tokens por tarea antes y después en tres tareas tipo: nuevo componente, nuevo token y corrección de bug.
+- Completado: proceso de mantenimiento documentado en [docs/harness-maintenance.md](harness-maintenance.md): errores repetidos, retrospectivas y revisión periódica.
+- Pendiente de ejecución: medir tokens para crear un componente, añadir un token y corregir un bug; el protocolo y la plantilla están en [docs/harness-maintenance.md](harness-maintenance.md). No se guardan métricas hasta disponer de contadores reportados por la herramienta.
 
 ## Orden de ejecución
 

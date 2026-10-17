@@ -25,6 +25,7 @@ La tarea está terminada cuando `npm run check` pasa.
 ## Skills del repositorio
 
 - Todas las skills viven en [.agents/skills/README.md](.agents/skills/README.md), que distingue las propias del repo de las importadas.
+- Para mantenimiento del harness, retrospectivas y medición, sigue [docs/harness-maintenance.md](docs/harness-maintenance.md).
 
 ## Guías por workspace
 
