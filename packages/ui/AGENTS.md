@@ -20,3 +20,4 @@
 
 - Usa Vitest, Testing Library y `tests/setup.ts`; añade tests para renderizado, interacción y estados relevantes.
 - Ejecuta `npm run test:run -w @monorepo/ui`, `npm run typecheck` y `npx eslint <ficheros>`.
+- Consulta la [receta de componentes](../../docs/ui-components.md), la guía de [tokens](../../docs/tokens.md) y la guía de [testing](../../docs/testing.md).

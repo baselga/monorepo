@@ -26,3 +26,11 @@ La tarea está terminada cuando los tests, el typecheck y el lint de los fichero
 
 - Para componentes, estilos y tests de `packages/ui`, consulta [packages/ui/AGENTS.md](packages/ui/AGENTS.md).
 - Para demos de `apps/ui-dev`, consulta [apps/ui-dev/AGENTS.md](apps/ui-dev/AGENTS.md).
+
+## Documentación técnica
+
+- [Arquitectura y desarrollo](docs/architecture.md): workspaces, exports y flujo de build/dev.
+- [Receta de componentes UI](docs/ui-components.md): estructura, Button como plantilla y demo.
+- [Tokens](docs/tokens.md): familias de tokens y usos; no repite sus valores.
+- [Testing](docs/testing.md): patrones de Vitest y Testing Library.
+- [Decisiones de arquitectura](docs/decisions/): ADRs breves sobre las convenciones de UI.

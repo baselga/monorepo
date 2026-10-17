@@ -13,10 +13,10 @@ Objetivo: que un agente entienda el repo con el mínimo de lecturas, siga las co
 
 - npm workspaces: `apps/ui-dev` (Vite, playground) y `packages/ui` (`@monorepo/ui`: React 19, react-aria-components, CVA, CSS Modules, tokens CSS, Vitest).
 - Calidad: ESLint strict, Prettier, `tsc -b`, husky (pre-commit con lint-staged; pre-push con lint, format, typecheck y build).
-- No hay `AGENTS.md`, docs para agentes, skills ni CI. Las convenciones solo están implícitas en el código; `packages/ui/src/tokens/README.md` es la única documentación.
+- Las fases 1 y 2 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code y documentación técnica compacta en `docs/`. Las skills y CI siguen pendientes según el alcance de fases posteriores.
 - Solo existe un componente (Button) con un test: buen momento para fijar patrones.
 
-## Fase 1 – Contexto base (impacto alto, esfuerzo bajo)
+## Fase 1 – Contexto base (impacto alto, esfuerzo bajo) — Completada
 
 1. `AGENTS.md` en la raíz (menos de 80 líneas):
    - Mapa del repo y stack (2 líneas por workspace).
@@ -27,7 +27,7 @@ Objetivo: que un agente entienda el repo con el mínimo de lecturas, siga las co
 3. `CLAUDE.md` con `@AGENTS.md` y, si hace falta, `.github/copilot-instructions.md` apuntando a `AGENTS.md`.
 4. `.vscode/settings.json`: activar `chat.useAgentsMdFile` y `chat.useNestedAgentsMdFiles`, y `search.exclude` para `package-lock.json`, `dist` y `*.tsbuildinfo`.
 
-## Fase 2 – Documentación compacta (`docs/`)
+## Fase 2 – Documentación compacta (`docs/`) — Completada
 
 Cada documento con menos de 100 líneas, enlazado desde `AGENTS.md` y cargado bajo demanda:
 
