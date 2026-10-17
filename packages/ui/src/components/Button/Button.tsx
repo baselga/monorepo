@@ -4,6 +4,7 @@ import {
   type ButtonProps as RACButtonProps,
 } from "react-aria-components/Button";
 import styles from "./Button.module.css";
+import { LoaderCircle } from "lucide-react";
 
 interface ButtonProps extends Omit<RACButtonProps, "className"> {
   className?: string;
@@ -11,6 +12,7 @@ interface ButtonProps extends Omit<RACButtonProps, "className"> {
   variant?: "solid" | "outline" | "text";
   size?: "small" | "medium" | "large";
   loading?: boolean;
+  children?: React.ReactNode;
 }
 
 export const Button = ({
@@ -33,7 +35,7 @@ export const Button = ({
       isDisabled={loading || isDisabled}
       isPending={loading}
     >
-      {children}
+      <span className={styles.content}>{children}</span>
     </RACButton>
   );
 };
