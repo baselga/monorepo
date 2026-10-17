@@ -85,6 +85,12 @@ Descartadas por ahora (asumen issue tracker y flujo de specs): `triage`, `to-spe
 - Completado: proceso de mantenimiento documentado en [docs/harness-maintenance.md](harness-maintenance.md): errores repetidos, retrospectivas y revisión periódica.
 - Pendiente de ejecución: medir tokens para crear un componente, añadir un token y corregir un bug; el protocolo y la plantilla están en [docs/harness-maintenance.md](harness-maintenance.md). No se guardan métricas hasta disponer de contadores reportados por la herramienta.
 
+## Fase 7 – Hooks de agente y medición (hooks completados; medición pendiente)
+
+- Completado: `.github/hooks/agent-tools.json` conecta los hooks `preToolUse` y `postToolUse` con `scripts/agent-hooks.mjs`. El primero bloquea lecturas de dependencias y artefactos generados; el segundo aplica Prettier y ESLint tras editar.
+- Completado: pruebas automatizadas cubren el bloqueo de lecturas ruidosas, la lectura de fuentes y el formateo; `npm run check` las ejecuta.
+- Pendiente: la medición comparativa requiere contadores de entrada y salida reportados por la herramienta. Sigue el protocolo de [docs/harness-maintenance.md](harness-maintenance.md); no rellenes métricas estimadas.
+
 ## Orden de ejecución
 
 1. Fase 1: `AGENTS.md` raíz y de `packages/ui`.
@@ -93,4 +99,4 @@ Descartadas por ahora (asumen issue tracker y flujo de specs): `triage`, `to-spe
 4. Resto de skills propias y docs.
 5. Skills de terceros y `setup-matt-pocock-skills`.
 6. Fase 5: validación unificada con tests en `pre-push`.
-7. Hooks de agente y medición.
+7. Hooks de agente (completados) y medición comparativa (pendiente de contadores reportados por la herramienta).
