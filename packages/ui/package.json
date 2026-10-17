@@ -19,9 +19,9 @@
     "./styles": "./dist/index.css"
   },
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "tsc -b --pretty false && vite build --logLevel warn",
     "dev": "vite build --watch",
-    "typecheck": "tsc -b --noEmit",
+    "typecheck": "tsc -b --noEmit --pretty false",
     "test": "vitest",
     "test:run": "vitest run"
   },

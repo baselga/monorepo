@@ -6,6 +6,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./tests/setup.ts"],
+    reporters: ["dot"],
     clearMocks: true,
     restoreMocks: true,
   },

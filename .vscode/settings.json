@@ -1,1 +1,9 @@
-{}
+{
+  "chat.useAgentsMdFile": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "search.exclude": {
+    "**/package-lock.json": true,
+    "**/dist": true,
+    "**/*.tsbuildinfo": true
+  }
+}
