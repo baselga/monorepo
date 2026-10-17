@@ -3,12 +3,12 @@
 Para añadir un componente público a `packages/ui`:
 
 1. Crea `src/components/<Nombre>/<Nombre>.tsx` y `<Nombre>.module.css`.
-2. Añade `tests/components/<Nombre>.test.tsx`.
+2. Añade siempre `tests/components/<Nombre>.test.tsx`; todo componente debe incluir un test.
 3. Importa las interacciones de React Aria desde su subpath. Tipa las props y representa variantes con atributos `data-*`.
 4. Usa tokens semánticos en el CSS Module; no añadas estilos de componente a hojas globales.
 5. Exporta el componente desde `src/index.ts`.
 6. Añade una demo enfocada en `apps/ui-dev/src/` si hace falta mostrar variantes o interacciones.
-7. Ejecuta las pruebas, el typecheck y ESLint para los ficheros modificados.
+7. Ejecuta `npm run check` para validar lint, formato, tipos, tests y builds.
 
 ## Plantilla
 

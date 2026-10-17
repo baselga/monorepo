@@ -12,15 +12,15 @@ Objetivo: que un agente entienda el repo con el mínimo de lecturas, siga las co
 ## Estado actual
 
 - npm workspaces: `apps/ui-dev` (Vite, playground) y `packages/ui` (`@monorepo/ui`: React 19, react-aria-components, CVA, CSS Modules, tokens CSS, Vitest).
-- Calidad: ESLint strict, Prettier, `tsc -b`, husky (pre-commit con lint-staged; pre-push con lint, format, typecheck y build).
-- Las fases 1, 2, 3 y 4 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code, documentación técnica compacta, skills propias/de terceros versionadas, scripts de verificación concisos y hooks de agente. CI sigue fuera del alcance actual.
+- Calidad: ESLint strict, Prettier, `tsc -b`, husky (pre-commit con lint-staged; pre-push con `npm run check`).
+- Las fases 1, 2, 3, 4 y 5 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code, documentación técnica compacta, skills propias/de terceros versionadas, scripts de verificación concisos, hooks de agente y un comando local único de validación. CI sigue fuera del alcance actual.
 - Solo existe un componente (Button) con un test: buen momento para fijar patrones.
 
 ## Fase 1 – Contexto base (impacto alto, esfuerzo bajo) — Completada
 
 1. `AGENTS.md` en la raíz (menos de 80 líneas):
    - Mapa del repo y stack (2 líneas por workspace).
-   - Comandos exactos y baratos por workspace (`npm run test:run -w @monorepo/ui`, `npm run typecheck`, `npx eslint <ficheros>`) y qué no ejecutar (`build` completo, `dev` en primer plano).
+   - Comandos de desarrollo por workspace y uso de `npm run check` para validar localmente; no dejar `dev` en primer plano.
    - Reglas duras: usar tokens (nunca valores crudos), CSS Modules, variantes vía `data-*`, exportar desde `src/index.ts`, imports de react-aria por subpath, no tocar `dist/`, `node_modules`, `*.tsbuildinfo` ni `package-lock.json`.
    - Definición de "hecho": tests, typecheck y lint pasan.
 2. `AGENTS.md` anidados cortos: `packages/ui/AGENTS.md` (anatomía de componente, estilos, tests) y `apps/ui-dev/AGENTS.md` (cómo añadir una demo).
@@ -67,17 +67,17 @@ Descartadas por ahora (asumen issue tracker y flujo de specs): `triage`, `to-spe
 
 ## Fase 4 – Ahorro de tokens en la ejecución — Completada
 
-- Scripts en la raíz con salida mínima: `check` (lint + typecheck + test), `test:ui` y `lint:changed` (eslint solo sobre ficheros modificados).
+- Scripts en la raíz con salida mínima: `check` (lint + formato + typecheck + test + build), `test:ui` y `lint:changed` (eslint solo sobre ficheros modificados).
 - Reporters silenciosos: Vitest con reporter `dot`, `tsc --pretty false`, builds sin logs verbosos.
 - Hooks de agente que bloqueen la lectura de ficheros de ruido y ejecuten prettier y eslint tras editar.
 - Estructura y nombres predecibles (barrel `index.ts`, una carpeta por componente) para localizar sin buscar, establecida en las guías de los workspaces.
 
 ## Fase 5 – Verificación y feedback loop (sin CI)
 
-- Añadir `test` al hook `pre-push`, que hoy solo ejecuta lint, format, typecheck y build.
-- Hacer que `check` sea el comando único de validación local, referenciado en `AGENTS.md` y en la skill `verify`.
-- Regla: todo componente lleva test.
-- Opcional: una página por componente en `apps/ui-dev` y un smoke test con Playwright para que el agente valide la UI visualmente.
+- Completada: `pre-push` ejecuta `npm run check`, que incluye lint, formato, typecheck, tests y build.
+- Completada: `npm run check` es el comando único de validación local, referenciado en `AGENTS.md` y en la skill `verify`.
+- Completada: todo componente lleva test, según las guías de componentes y testing.
+- Opcional y pendiente: una página por componente en `apps/ui-dev` y un smoke test con Playwright para validar la UI visualmente.
 - Si más adelante se decide usar CI, reutilizar `check` tal cual.
 
 ## Fase 6 – Mantenimiento
@@ -94,5 +94,5 @@ Descartadas por ahora (asumen issue tracker y flujo de specs): `triage`, `to-spe
 3. Fase 2: `docs/ui-components.md` y Fase 3: skill `new-component`.
 4. Resto de skills propias y docs.
 5. Skills de terceros y `setup-matt-pocock-skills`.
-6. Fase 5: `test` en `pre-push`.
+6. Fase 5: validación unificada con tests en `pre-push`.
 7. Hooks de agente y medición.

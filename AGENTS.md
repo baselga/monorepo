@@ -7,23 +7,20 @@
 
 ## Comandos de verificación
 
-- Verificación completa: `npm run check` (lint, typecheck y tests).
-- Tests de la biblioteca: `npm run test:ui`.
-- Lint de ficheros cambiados: `npm run lint:changed`.
-- Tests de la biblioteca: `npm run test:run -w @monorepo/ui`.
-- Typecheck del monorepo: `npm run typecheck`.
-- Lint de los ficheros modificados: `npx eslint <ficheros>`.
-- No ejecutes el build completo si no es necesario: compila todos los workspaces. No dejes `dev` en primer plano; si hace falta, usa `npm run dev` para levantar biblioteca y app conjuntamente.
+- Verificación local única: `npm run check` (lint, formato, typecheck, tests y build).
+- Usa `npm run lint:changed` solo para comprobar rápidamente el lint de los ficheros modificados.
+- `npm run check` incluye el build de todos los workspaces; no ejecutes el build completo por separado si no es necesario. No dejes `dev` en primer plano; si hace falta, usa `npm run dev` para levantar biblioteca y app conjuntamente.
 
 ## Reglas obligatorias
 
 - Usa tokens semánticos existentes para valores visuales; nunca escribas valores crudos de color, espacio, tipografía, borde o elevación.
 - Los estilos de componentes van en CSS Modules (`*.module.css`), no en hojas globales.
+- Todo componente de `packages/ui` debe incluir un test en `tests/components/`.
 - No edites `dist/`, `node_modules/`, ficheros `*.tsbuildinfo` ni `package-lock.json`.
 
 ## Definición de hecho
 
-La tarea está terminada cuando los tests, el typecheck y el lint de los ficheros afectados pasan.
+La tarea está terminada cuando `npm run check` pasa.
 
 ## Skills del repositorio
 

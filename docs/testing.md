@@ -2,6 +2,8 @@
 
 La biblioteca usa Vitest, jsdom y Testing Library. Los tests viven en `packages/ui/tests/`; `tests/setup.ts` registra `jest-dom` y limpia el DOM después de cada prueba.
 
+Todo componente nuevo debe incluir un test en `tests/components/`.
+
 ## Patrones
 
 - Consulta elementos por rol y nombre accesible con `screen.getByRole`; evita selectores ligados a la estructura interna.
@@ -11,10 +13,8 @@ La biblioteca usa Vitest, jsdom y Testing Library. Los tests viven en `packages/
 - Usa `vi.fn()` para callbacks y verifica número de invocaciones y que no se invoquen en estados no interactivos.
 - Mantén las pruebas enfocadas en comportamiento; no fijes detalles internos de CSS ni uses snapshots para sustituir assertions.
 
-## Comandos
+## Validación
 
-- Tests: `npm run test:run -w @monorepo/ui`
-- Tipos: `npm run typecheck`
-- Lint de cambios: `npx eslint <ficheros>`
+Ejecuta `npm run check` para validar lint, formato, tipos, tests y builds del monorepo.
 
 Consulta [Button.test.tsx](../packages/ui/tests/components/Button.test.tsx) como ejemplo ejecutable.

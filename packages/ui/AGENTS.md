@@ -10,7 +10,7 @@
 
 ## Componentes
 
-- Crea cada componente en `src/components/<Nombre>/`: `<Nombre>.tsx`, `<Nombre>.module.css` y su test en `tests/components/<Nombre>.test.tsx`.
+- Todo componente debe tener un test en `tests/components/<Nombre>.test.tsx`; crea cada componente en `src/components/<Nombre>/` con `<Nombre>.tsx`, `<Nombre>.module.css` y su test.
 - Usa React Aria para interacciones accesibles; importa cada componente desde su subpath, por ejemplo `react-aria-components/Button`.
 - Define las variantes con props tipadas y refléjalas en atributos `data-*`; selecciónalas desde el CSS Module.
 - Usa tokens CSS semánticos para todos los valores visuales. No introduzcas valores crudos ni estilos globales de componente.
@@ -19,5 +19,5 @@
 ## Tests
 
 - Usa Vitest, Testing Library y `tests/setup.ts`; añade tests para renderizado, interacción y estados relevantes.
-- Ejecuta `npm run test:run -w @monorepo/ui`, `npm run typecheck` y `npx eslint <ficheros>`.
+- Ejecuta `npm run check` para validar los cambios localmente.
 - Consulta la [receta de componentes](../../docs/ui-components.md), la guía de [tokens](../../docs/tokens.md) y la guía de [testing](../../docs/testing.md).
