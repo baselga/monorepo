@@ -13,7 +13,7 @@ Objetivo: que un agente entienda el repo con el mínimo de lecturas, siga las co
 
 - npm workspaces: `apps/ui-dev` (Vite, playground) y `packages/ui` (`@monorepo/ui`: React 19, react-aria-components, CVA, CSS Modules, tokens CSS, Vitest).
 - Calidad: ESLint strict, Prettier, `tsc -b`, husky (pre-commit con lint-staged; pre-push con lint, format, typecheck y build).
-- Las fases 1 y 2 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code y documentación técnica compacta en `docs/`. Las skills y CI siguen pendientes según el alcance de fases posteriores.
+- Las fases 1, 2 y 3 están completadas: hay guías `AGENTS.md` en raíz y workspaces, instrucciones para agentes, ajustes de VS Code, documentación técnica compacta y skills propias/de terceros versionadas. CI sigue fuera del alcance actual.
 - Solo existe un componente (Button) con un test: buen momento para fijar patrones.
 
 ## Fase 1 – Contexto base (impacto alto, esfuerzo bajo) — Completada
@@ -37,9 +37,9 @@ Cada documento con menos de 100 líneas, enlazado desde `AGENTS.md` y cargado ba
 - `docs/testing.md`: Vitest + Testing Library, `tests/setup.ts`, queries preferidas y qué testear.
 - `docs/decisions/`: ADRs de 5-10 líneas (por qué react-aria, CVA, CSS Modules, tokens por capas). Los generará en parte `grill-with-docs`.
 
-## Fase 3 – Skills
+## Fase 3 – Skills — Completada
 
-### Propias del repo (`.github/skills/`; Claude y Codex leen sus rutas equivalentes)
+### Propias del repo (`.agents/skills/`)
 
 Cada una con `SKILL.md` y una `description` precisa para que se active solo cuando toca:
 
@@ -48,7 +48,7 @@ Cada una con `SKILL.md` y una `description` precisa para que se active solo cuan
 - `verify`: secuencia mínima de validación por alcance (ficheros tocados, workspace, global).
 - `commit`: conventional commits (`feat(ui): ...`) y formato del historial.
 
-### De terceros (mattpocock/skills)
+### De terceros (mattpocock/skills; `.agents/skills/`)
 
 Instalar con `npx skills@latest add mattpocock/skills -a <agente>` eligiendo solo las siguientes, para que queden versionadas y editables en el repo. No usar la vía de plugin a la vez (duplica las skills) ni instalar todas (cada skill añade su descripción al contexto).
 

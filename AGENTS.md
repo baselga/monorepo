@@ -22,6 +22,10 @@
 
 La tarea está terminada cuando los tests, el typecheck y el lint de los ficheros afectados pasan.
 
+## Skills del repositorio
+
+- Todas las skills viven en [.agents/skills/README.md](.agents/skills/README.md), que distingue las propias del repo de las importadas.
+
 ## Guías por workspace
 
 - Para componentes, estilos y tests de `packages/ui`, consulta [packages/ui/AGENTS.md](packages/ui/AGENTS.md).
