@@ -1,0 +1,195 @@
+.ds-block {
+  display: block;
+}
+
+.ds-inline {
+  display: inline;
+}
+
+.ds-inline-block {
+  display: inline-block;
+}
+
+.ds-flex {
+  display: flex;
+}
+
+.ds-inline-flex {
+  display: inline-flex;
+}
+
+.ds-grid {
+  display: grid;
+}
+
+.ds-hidden {
+  display: none;
+}
+
+.ds-flex-row {
+  flex-direction: row;
+}
+
+.ds-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.ds-flex-col {
+  flex-direction: column;
+}
+
+.ds-flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.ds-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ds-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.ds-flex-1 {
+  flex: 1 1 0;
+}
+
+.ds-flex-auto {
+  flex: 1 1 auto;
+}
+
+.ds-flex-none {
+  flex: none;
+}
+
+.ds-grow {
+  flex-grow: 1;
+}
+
+.ds-grow-0 {
+  flex-grow: 0;
+}
+
+.ds-shrink {
+  flex-shrink: 1;
+}
+
+.ds-shrink-0 {
+  flex-shrink: 0;
+}
+
+.ds-items-start {
+  align-items: flex-start;
+}
+
+.ds-items-center {
+  align-items: center;
+}
+
+.ds-items-end {
+  align-items: flex-end;
+}
+
+.ds-items-stretch {
+  align-items: stretch;
+}
+
+.ds-justify-start {
+  justify-content: flex-start;
+}
+
+.ds-justify-center {
+  justify-content: center;
+}
+
+.ds-justify-end {
+  justify-content: flex-end;
+}
+
+.ds-justify-between {
+  justify-content: space-between;
+}
+
+.ds-justify-around {
+  justify-content: space-around;
+}
+
+.ds-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.ds-self-start {
+  align-self: flex-start;
+}
+
+.ds-self-center {
+  align-self: center;
+}
+
+.ds-self-end {
+  align-self: flex-end;
+}
+
+.ds-self-stretch {
+  align-self: stretch;
+}
+
+.ds-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.ds-grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ds-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ds-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ds-grid-cols-none {
+  grid-template-columns: none;
+}
+
+.ds-relative {
+  position: relative;
+}
+
+.ds-absolute {
+  position: absolute;
+}
+
+.ds-fixed {
+  position: fixed;
+}
+
+.ds-sticky {
+  position: sticky;
+}
+
+.ds-static {
+  position: static;
+}
+
+.ds-overflow-auto {
+  overflow: auto;
+}
+
+.ds-overflow-hidden {
+  overflow: hidden;
+}
+
+.ds-overflow-scroll {
+  overflow: scroll;
+}
+
+.ds-overflow-x-auto {
+  overflow-x: auto;
+}
+
+.ds-overflow-y-auto {
+  overflow-y: auto;
+}

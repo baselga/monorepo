@@ -8,7 +8,7 @@
 
 ## Exportaciones y estilos
 
-- La entrada pública es `packages/ui/src/index.ts`; exporta los componentes y carga los tokens.
+- La entrada pública es `packages/ui/src/index.ts`; exporta los componentes y carga los tokens y las [clases de utilidad](utility-classes.md).
 - El export `.` de `@monorepo/ui` usa la condición `development` para resolver `src/index.ts` durante el desarrollo. En producción, `import` y `default` resuelven `dist/index.js`; `types` resuelve las declaraciones generadas.
 - `@monorepo/ui/styles` resuelve `dist/index.css`. La app debe importar `@monorepo/ui/styles` explícitamente.
 - Vite empaqueta la biblioteca como módulo ES; React y React DOM son dependencias externas.

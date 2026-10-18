@@ -5,5 +5,6 @@
     "**/package-lock.json": true,
     "**/dist": true,
     "**/*.tsbuildinfo": true
-  }
+  },
+  "css.styleSheets": ["packages/ui/src/utilities/**/*.css"]
 }
