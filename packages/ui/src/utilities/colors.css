@@ -1,0 +1,87 @@
+.ds-bg-canvas {
+  background-color: var(--bg-canvas);
+}
+
+.ds-bg-surface {
+  background-color: var(--bg-surface);
+}
+
+.ds-bg-surface-raised {
+  background-color: var(--bg-surface-raised);
+}
+
+.ds-bg-subtle {
+  background-color: var(--bg-subtle);
+}
+
+.ds-bg-muted {
+  background-color: var(--bg-muted);
+}
+
+.ds-bg-inverse {
+  background-color: var(--bg-inverse);
+}
+
+.ds-bg-brand {
+  background-color: var(--bg-brand);
+}
+
+.ds-bg-brand-hover {
+  background-color: var(--bg-brand-hover);
+}
+
+.ds-bg-brand-subtle {
+  background-color: var(--bg-brand-subtle);
+}
+
+.ds-bg-accent {
+  background-color: var(--bg-accent);
+}
+
+.ds-bg-accent-subtle {
+  background-color: var(--bg-accent-subtle);
+}
+
+.ds-text-primary {
+  color: var(--text-primary);
+}
+
+.ds-text-secondary {
+  color: var(--text-secondary);
+}
+
+.ds-text-muted {
+  color: var(--text-muted);
+}
+
+.ds-text-inverse {
+  color: var(--text-inverse);
+}
+
+.ds-text-on-brand {
+  color: var(--text-on-brand);
+}
+
+.ds-text-on-accent {
+  color: var(--text-on-accent);
+}
+
+.ds-text-brand {
+  color: var(--text-brand);
+}
+
+.ds-text-accent {
+  color: var(--text-accent);
+}
+
+.ds-border-default {
+  border-color: var(--border-default);
+}
+
+.ds-border-strong {
+  border-color: var(--border-strong);
+}
+
+.ds-border-focus {
+  border-color: var(--border-focus);
+}
