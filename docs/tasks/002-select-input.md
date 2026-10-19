@@ -1,4 +1,4 @@
-# Tarea: `SelectInput` accesible
+# Tarea: `SelectInput` accesible — Completada
 
 ## Objetivo
 

@@ -1,4 +1,4 @@
-# Tarea: exportar tipos públicos de props
+# Tarea: exportar tipos públicos de props — Completada
 
 ## Objetivo
 

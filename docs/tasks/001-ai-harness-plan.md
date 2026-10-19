@@ -1,4 +1,4 @@
-# Plan: harness de IA para el monorepo
+# Plan: harness de IA para el monorepo — Completado
 
 Objetivo: que un agente entienda el repo con el mínimo de lecturas, siga las convenciones y verifique su trabajo solo, consumiendo menos tokens por tarea.
 

@@ -6,7 +6,7 @@ import {
 import styles from "./Button.module.css";
 import { LoaderCircle } from "lucide-react";
 
-interface ButtonProps extends Omit<RACButtonProps, "className"> {
+export interface ButtonProps extends Omit<RACButtonProps, "className"> {
   className?: string;
   colorStyle?: "neutral" | "primary" | "secondary";
   variant?: "solid" | "outline" | "text";
