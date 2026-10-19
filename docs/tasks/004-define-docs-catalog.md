@@ -1,4 +1,4 @@
-# Tarea: definir el catálogo tipado de documentación
+# Tarea: definir el catálogo tipado de documentación — Completada
 
 ## Objetivo
 
