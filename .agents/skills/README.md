@@ -21,3 +21,7 @@ Instaladas como copias editables y registradas en [`skills-lock.json`](../../ski
 - [diagnosing-bugs](./diagnosing-bugs/SKILL.md)
 - [handoff](./handoff/SKILL.md)
 - [retro](./retro/SKILL.md)
+
+## Importadas de sickn33/agentic-awesome-skills
+
+- [frontend-dev-guidelines](./frontend-dev-guidelines/SKILL.md)
