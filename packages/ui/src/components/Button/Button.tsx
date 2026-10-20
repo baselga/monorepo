@@ -4,7 +4,6 @@ import {
   type ButtonProps as RACButtonProps,
 } from "react-aria-components/Button";
 import styles from "./Button.module.css";
-import { LoaderCircle } from "lucide-react";
 
 export interface ButtonProps extends Omit<RACButtonProps, "className"> {
   className?: string;
