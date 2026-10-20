@@ -1,4 +1,4 @@
-# Tarea: construir el shell de la aplicación de documentación
+# Tarea: construir el shell de la aplicación de documentación — Completada
 
 ## Objetivo
 

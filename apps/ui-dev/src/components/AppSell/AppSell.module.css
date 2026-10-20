@@ -1,0 +1,42 @@
+.appShell {
+  min-block-size: 100vh;
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font: var(--type-body);
+}
+
+.skipLink {
+  position: fixed;
+  inset-block-start: var(--space-2);
+  inset-inline-start: var(--space-2);
+  z-index: var(--z-toast);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--bg-inverse);
+  color: var(--text-inverse);
+  transform: translateY(-200%);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr) minmax(0, 14rem);
+  max-inline-size: 100rem;
+  margin-inline: auto;
+}
+
+@media (max-width: 64rem) {
+  .layout {
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .layout {
+    display: block;
+  }
+}
