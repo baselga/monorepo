@@ -1,6 +1,7 @@
 import { useCallback, useState, type JSX, type MouseEvent } from "react";
 import type { DocumentationRoute } from "../../docs/catalog";
 import { useDocumentationNavigation } from "../../docs/useDocumentationNavigation";
+import { useTheme } from "../../theme/useTheme";
 import styles from "./AppSell.module.css";
 import { DocumentationHeader } from "../DocumentationHeader/DocumentationHeader";
 import { DocumentationSidebar } from "../DocumentationSidebar/DocumentationSidebar";
@@ -9,6 +10,7 @@ import { DocumentationLocalIndex } from "../DocumentationLocalIndex/Documentatio
 
 export const AppSell = (): JSX.Element => {
   const { currentRoute, navigate } = useDocumentationNavigation();
+  const { theme, toggleTheme } = useTheme();
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
 
   const handleNavigation = useCallback(
@@ -44,6 +46,8 @@ export const AppSell = (): JSX.Element => {
         isNavigationOpen={isNavigationOpen}
         onNavigate={handleNavigation}
         onToggleNavigation={toggleNavigation}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       <div className={styles.layout}>

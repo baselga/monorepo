@@ -1,5 +1,9 @@
 # Tarea: añadir el control de tema
 
+## Estado
+
+Completada.
+
 ## Objetivo
 
 Ofrecer un control claro/oscuro que utilice el soporte existente de tokens
