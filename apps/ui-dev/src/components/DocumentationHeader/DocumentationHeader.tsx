@@ -1,15 +1,43 @@
 import { Button, TextInput } from "@monorepo/ui";
-import type { JSX } from "react";
+import type { JSX, MouseEvent } from "react";
+import type { DocumentationRoute } from "../../docs/catalog";
 import styles from "./DocumentationHeader.module.css";
 
-export const DocumentationHeader = (): JSX.Element => {
+interface DocumentationHeaderProps {
+  isNavigationOpen: boolean;
+  onNavigate: (
+    event: MouseEvent<HTMLAnchorElement>,
+    route: DocumentationRoute,
+  ) => void;
+  onToggleNavigation: () => void;
+}
+
+export const DocumentationHeader = ({
+  isNavigationOpen,
+  onNavigate,
+  onToggleNavigation,
+}: DocumentationHeaderProps): JSX.Element => {
   return (
     <header className={styles.header}>
-      <a className={styles.brand} href="/" aria-label="Inicio de Monorepo UI">
+      <a
+        className={styles.brand}
+        href="/"
+        aria-label="Inicio de Monorepo UI"
+        onClick={(event) => onNavigate(event, "/")}
+      >
         Monorepo UI
       </a>
 
       <div className={styles.actions}>
+        <Button
+          type="button"
+          aria-controls="documentation-navigation"
+          aria-expanded={isNavigationOpen}
+          onPress={onToggleNavigation}
+          className={styles.navigationToggle}
+        >
+          Navegación
+        </Button>
         <div className={styles.search} role="search">
           <label
             className={styles.visuallyHidden}

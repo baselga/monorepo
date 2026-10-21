@@ -11,6 +11,7 @@ export type {
   DocumentationCategory,
   DocumentationCategoryId,
   DocumentationExample,
+  DocumentationNavigationGroup,
   DocumentationNavigationItem,
   DocumentationPage,
   DocumentationRoute,

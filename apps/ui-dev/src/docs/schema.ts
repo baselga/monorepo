@@ -75,6 +75,11 @@ export interface DocumentationNavigationItem {
   kind: "category" | "page";
 }
 
+export interface DocumentationNavigationGroup {
+  category: DocumentationCategory;
+  pages: readonly DocumentationNavigationItem[];
+}
+
 export interface DocumentationSearchResult {
   id: string;
   title: string;

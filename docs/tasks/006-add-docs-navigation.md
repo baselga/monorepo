@@ -1,4 +1,4 @@
-# Tarea: añadir navegación de documentación
+# Tarea: añadir navegación de documentación — Completada
 
 ## Objetivo
 
