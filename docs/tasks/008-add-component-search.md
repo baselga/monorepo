@@ -1,4 +1,4 @@
-# Tarea: añadir búsqueda global de componentes
+# Tarea: añadir búsqueda global de componentes — Completada
 
 ## Objetivo
 

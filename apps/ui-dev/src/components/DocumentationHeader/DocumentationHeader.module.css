@@ -21,8 +21,7 @@
   color: var(--text-brand);
 }
 
-.actions,
-.search {
+.actions {
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -30,23 +29,6 @@
 
 .navigationToggle {
   display: none;
-}
-
-.search {
-  inline-size: min(100%, 32rem);
-}
-
-.search :global(input) {
-  min-inline-size: 0;
-}
-
-.visuallyHidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
 }
 
 @media (max-width: 48rem) {
@@ -63,20 +45,11 @@
   .actions {
     justify-content: space-between;
   }
-
-  .search {
-    flex: 1;
-  }
 }
 
 @media (max-width: 32rem) {
-  .actions,
-  .search {
+  .actions {
     align-items: stretch;
     flex-direction: column;
-  }
-
-  .search {
-    inline-size: 100%;
   }
 }

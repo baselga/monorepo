@@ -1,8 +1,9 @@
-import { Button, TextInput } from "@monorepo/ui";
+import { Button } from "@monorepo/ui";
 import { Moon, Sun } from "lucide-react";
 import type { JSX, MouseEvent } from "react";
 import type { DocumentationRoute } from "../../docs/catalog";
 import type { Theme } from "../../theme/useTheme";
+import { DocumentationSearch } from "../DocumentationSearch/DocumentationSearch";
 import styles from "./DocumentationHeader.module.css";
 
 interface DocumentationHeaderProps {
@@ -11,6 +12,7 @@ interface DocumentationHeaderProps {
     event: MouseEvent<HTMLAnchorElement>,
     route: DocumentationRoute,
   ) => void;
+  onSearchNavigate: (route: DocumentationRoute) => void;
   onToggleNavigation: () => void;
   theme: Theme;
   onToggleTheme: () => void;
@@ -19,6 +21,7 @@ interface DocumentationHeaderProps {
 export const DocumentationHeader = ({
   isNavigationOpen,
   onNavigate,
+  onSearchNavigate,
   onToggleNavigation,
   theme,
   onToggleTheme,
@@ -47,22 +50,7 @@ export const DocumentationHeader = ({
         >
           Navegación
         </Button>
-        <div className={styles.search} role="search">
-          <label
-            className={styles.visuallyHidden}
-            htmlFor="documentation-search"
-          >
-            Buscar en la documentación
-          </label>
-          <TextInput
-            size="small"
-            id="documentation-search"
-            placeholder="Buscar documentación"
-          />
-          <Button type="button" size="small">
-            Buscar
-          </Button>
-        </div>
+        <DocumentationSearch onNavigate={onSearchNavigate} />
         <Button
           size="small"
           type="button"

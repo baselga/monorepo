@@ -19,6 +19,7 @@ export interface DocumentationPage {
   category: DocumentationCategoryId;
   title: string;
   summary: string;
+  tags: readonly string[];
   route: DocumentationRoute;
 }
 
@@ -84,6 +85,7 @@ export interface DocumentationSearchResult {
   id: string;
   title: string;
   summary: string;
+  tags: readonly string[];
   route: DocumentationRoute;
   category: DocumentationCategoryId;
   categoryTitle: string;

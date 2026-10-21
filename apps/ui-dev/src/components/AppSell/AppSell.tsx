@@ -36,6 +36,14 @@ export const AppSell = (): JSX.Element => {
     setIsNavigationOpen((isOpen) => !isOpen);
   }, []);
 
+  const handleSearchNavigation = useCallback(
+    (route: DocumentationRoute): void => {
+      navigate(route);
+      setIsNavigationOpen(false);
+    },
+    [navigate],
+  );
+
   return (
     <div className={styles.appShell}>
       <a className={styles.skipLink} href="#main-content">
@@ -45,6 +53,7 @@ export const AppSell = (): JSX.Element => {
       <DocumentationHeader
         isNavigationOpen={isNavigationOpen}
         onNavigate={handleNavigation}
+        onSearchNavigate={handleSearchNavigation}
         onToggleNavigation={toggleNavigation}
         theme={theme}
         onToggleTheme={toggleTheme}

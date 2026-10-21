@@ -12,6 +12,7 @@ export const buttonDocumentation =
     category: "components",
     title: "Button",
     summary: "Activa una acción desde una interfaz.",
+    tags: ["acción", "interacción", "botón"],
     route: "/componentes/button",
     examples: [
       {

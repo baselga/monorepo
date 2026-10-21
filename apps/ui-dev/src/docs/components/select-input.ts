@@ -12,6 +12,7 @@ export const selectInputDocumentation =
     category: "components",
     title: "SelectInput",
     summary: "Permite seleccionar una opción de una lista.",
+    tags: ["campo", "formulario", "selección", "lista"],
     route: "/componentes/select-input",
     examples: [
       {

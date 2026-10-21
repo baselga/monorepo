@@ -12,6 +12,7 @@ export const textInputDocumentation =
     category: "components",
     title: "TextInput",
     summary: "Permite introducir una única línea de texto.",
+    tags: ["campo", "formulario", "entrada", "texto"],
     route: "/componentes/text-input",
     examples: [
       {

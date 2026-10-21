@@ -7,10 +7,11 @@ const categoryTitles = new Map(
 );
 
 export const documentationSearchResults: readonly DocumentationSearchResult[] =
-  documentationPages.map(({ category, id, route, summary, title }) => ({
+  documentationPages.map(({ category, id, route, summary, tags, title }) => ({
     id,
     title,
     summary,
+    tags,
     route,
     category,
     categoryTitle: categoryTitles.get(category) ?? category,
@@ -26,8 +27,8 @@ export const searchDocumentation = (
   }
 
   return documentationSearchResults.filter(
-    ({ categoryTitle, summary, title }) =>
-      [categoryTitle, summary, title].some((value) =>
+    ({ categoryTitle, summary, tags, title }) =>
+      [categoryTitle, summary, title, ...tags].some((value) =>
         value.toLocaleLowerCase().includes(normalizedQuery),
       ),
   );
