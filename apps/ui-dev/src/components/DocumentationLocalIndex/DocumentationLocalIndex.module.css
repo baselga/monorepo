@@ -1,17 +1,9 @@
 .localIndex {
+  position: sticky;
+  inset-block-start: var(--space-16);
+  align-self: start;
   padding: var(--space-6);
   border-inline-start: var(--border-width-thin) solid var(--border-default);
-}
-
-.title {
-  margin: 0;
-  color: var(--text-primary);
-  font: var(--type-heading-sm);
-}
-
-.placeholder {
-  margin-block: var(--space-3) 0;
-  color: var(--text-secondary);
 }
 
 @media (max-width: 64rem) {

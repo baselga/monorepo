@@ -11,4 +11,10 @@ export const utilitiesDocumentation = {
   tags: ["utilidades", "CSS", "ds-", "layout"],
   route: "/fundamentos/utilidades",
   Content: UtilitiesDocumentationContent,
+  tableOfContents: [
+    { id: "utilities-import-title", title: "Carga de estilos" },
+    { id: "utilities-families-title", title: "Familias disponibles" },
+    { id: "utilities-example-title", title: "Ejemplo con APIs reales" },
+    { id: "utilities-restrictions-title", title: "Restricciones" },
+  ],
 } as const satisfies DocumentationPage;

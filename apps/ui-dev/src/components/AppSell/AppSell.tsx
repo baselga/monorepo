@@ -66,7 +66,7 @@ export const AppSell = (): JSX.Element => {
           onNavigate={handleNavigation}
         />
         <DocumentationContent currentRoute={currentRoute} />
-        <DocumentationLocalIndex />
+        <DocumentationLocalIndex currentRoute={currentRoute} />
       </div>
     </div>
   );

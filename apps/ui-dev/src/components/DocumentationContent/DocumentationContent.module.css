@@ -7,22 +7,8 @@
   max-inline-size: 72ch;
 }
 
-.eyebrow {
-  margin: 0 0 var(--space-2);
-  color: var(--text-brand);
-  font: var(--type-label);
-}
-
-.article h1 {
-  margin: 0;
-  font: var(--type-heading-lg);
-}
-
-.introduction {
-  margin-block: var(--space-4) 0;
-  color: var(--text-secondary);
-  font-size: var(--font-size-lg);
-  line-height: var(--line-height-relaxed);
+.article > header + * {
+  margin-block-start: var(--space-8);
 }
 
 @media (max-width: 48rem) {

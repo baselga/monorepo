@@ -1,17 +1,26 @@
 import type { JSX } from "react";
+import { resolveDocumentationRoute } from "../../docs/navigation";
+import type { DocumentationRoute } from "../../docs/catalog";
+import { DocumentationTableOfContents } from "../DocumentationPrimitives/DocumentationPrimitives";
 import styles from "./DocumentationLocalIndex.module.css";
 
-export const DocumentationLocalIndex = (): JSX.Element => {
+interface DocumentationLocalIndexProps {
+  currentRoute: DocumentationRoute;
+}
+
+export const DocumentationLocalIndex = ({
+  currentRoute,
+}: DocumentationLocalIndexProps): JSX.Element | null => {
+  const page = resolveDocumentationRoute(currentRoute);
+  const items = page?.kind === "page" ? page.tableOfContents : undefined;
+
+  if (!items || items.length === 0) {
+    return null;
+  }
+
   return (
     <aside className={styles.localIndex}>
-      <nav aria-labelledby="local-index-title">
-        <h2 id="local-index-title" className={styles.title}>
-          En esta página
-        </h2>
-        <p className={styles.placeholder}>
-          El índice local aparecerá cuando la página tenga secciones.
-        </p>
-      </nav>
+      <DocumentationTableOfContents items={items} />
     </aside>
   );
 };

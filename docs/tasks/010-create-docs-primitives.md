@@ -1,4 +1,4 @@
-# Tarea: crear primitivas reutilizables de documentación
+# Tarea: crear primitivas reutilizables de documentación - completada
 
 ## Objetivo
 

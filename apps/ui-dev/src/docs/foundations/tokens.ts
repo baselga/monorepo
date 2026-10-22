@@ -11,4 +11,10 @@ export const tokensDocumentation = {
   tags: ["tokens", "variables CSS", "tema", "accesibilidad"],
   route: "/fundamentos/tokens",
   Content: TokensDocumentationContent,
+  tableOfContents: [
+    { id: "tokens-import-title", title: "Carga de estilos" },
+    { id: "tokens-families-title", title: "Familias disponibles" },
+    { id: "tokens-colors-title", title: "Combinaciones de color" },
+    { id: "tokens-guidance-title", title: "Uso recomendado" },
+  ],
 } as const satisfies DocumentationPage;

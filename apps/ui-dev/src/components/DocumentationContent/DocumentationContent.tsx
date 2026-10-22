@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { DocumentationPageHeader } from "../DocumentationPrimitives/DocumentationPrimitives";
 import { resolveDocumentationRoute } from "../../docs/navigation";
 import type { DocumentationRoute } from "../../docs/catalog";
 import styles from "./DocumentationContent.module.css";
@@ -21,9 +22,11 @@ export const DocumentationContent = ({
   return (
     <main id="main-content" className={styles.mainContent}>
       <article className={styles.article}>
-        <p className={styles.eyebrow}>Sistema de diseño</p>
-        <h1>{currentPage.title}</h1>
-        <p className={styles.introduction}>{currentPage.summary}</p>
+        <DocumentationPageHeader
+          eyebrow="Sistema de diseño"
+          summary={currentPage.summary}
+          title={currentPage.title}
+        />
         <Content />
       </article>
     </main>

@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { DocumentationTableOfContentsItem } from "../components/DocumentationPrimitives/DocumentationPrimitives";
 
 export type DocumentationRoute = `/${string}`;
 
@@ -28,6 +29,7 @@ export interface DocumentationPage {
   tags: readonly string[];
   route: DocumentationRoute;
   Content: ComponentType;
+  tableOfContents?: readonly DocumentationTableOfContentsItem[];
 }
 
 type BooleanPropertyName<Props> = {
