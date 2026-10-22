@@ -2,6 +2,8 @@ import { documentationCategories } from "./categories";
 import { buttonDocumentation } from "./components/button";
 import { selectInputDocumentation } from "./components/select-input";
 import { textInputDocumentation } from "./components/text-input";
+import { tokensDocumentation } from "./foundations/tokens";
+import { utilitiesDocumentation } from "./foundations/utilities";
 import type { DocumentationNavigationItem, DocumentationPage } from "./schema";
 
 export { documentationCategories } from "./categories";
@@ -13,6 +15,7 @@ export type {
   DocumentationExample,
   DocumentationNavigationGroup,
   DocumentationNavigationItem,
+  DocumentationNavigationLink,
   DocumentationPage,
   DocumentationRoute,
   DocumentationSearchResult,
@@ -25,21 +28,11 @@ export const componentDocumentation = [
   selectInputDocumentation,
 ] as const;
 
-export const documentationPages =
-  componentDocumentation satisfies readonly DocumentationPage[];
+export const documentationPages = [
+  tokensDocumentation,
+  utilitiesDocumentation,
+  ...componentDocumentation,
+] as const satisfies readonly DocumentationPage[];
 
 export const documentationNavigationItems: readonly DocumentationNavigationItem[] =
-  [
-    ...documentationCategories.map(({ id, route, title }) => ({
-      id,
-      title,
-      route,
-      kind: "category" as const,
-    })),
-    ...documentationPages.map(({ id, route, title }) => ({
-      id,
-      title,
-      route,
-      kind: "page" as const,
-    })),
-  ];
+  [...documentationCategories, ...documentationPages];

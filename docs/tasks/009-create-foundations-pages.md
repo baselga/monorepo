@@ -1,4 +1,4 @@
-# Tarea: crear páginas de fundamentos
+# Tarea: crear páginas de fundamentos — Completada
 
 ## Objetivo
 

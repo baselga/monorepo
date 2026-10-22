@@ -1,3 +1,5 @@
+import type { ComponentType } from "react";
+
 export type DocumentationRoute = `/${string}`;
 
 export type DocumentationCategoryId =
@@ -5,8 +7,11 @@ export type DocumentationCategoryId =
 
 export interface DocumentationCategory {
   id: DocumentationCategoryId;
+  kind: "category";
   title: string;
+  summary: string;
   route: DocumentationRoute;
+  Content: ComponentType;
 }
 
 export interface DocumentationExample {
@@ -16,11 +21,13 @@ export interface DocumentationExample {
 
 export interface DocumentationPage {
   id: string;
+  kind: "page";
   category: DocumentationCategoryId;
   title: string;
   summary: string;
   tags: readonly string[];
   route: DocumentationRoute;
+  Content: ComponentType;
 }
 
 type BooleanPropertyName<Props> = {
@@ -69,7 +76,10 @@ export interface ComponentDocumentationPage<Props> extends DocumentationPage {
   playground: ComponentPlayground<Props>;
 }
 
-export interface DocumentationNavigationItem {
+export type DocumentationNavigationItem =
+  DocumentationCategory | DocumentationPage;
+
+export interface DocumentationNavigationLink {
   id: string;
   title: string;
   route: DocumentationRoute;
@@ -78,7 +88,7 @@ export interface DocumentationNavigationItem {
 
 export interface DocumentationNavigationGroup {
   category: DocumentationCategory;
-  pages: readonly DocumentationNavigationItem[];
+  pages: readonly DocumentationNavigationLink[];
 }
 
 export interface DocumentationSearchResult {
@@ -92,5 +102,8 @@ export interface DocumentationSearchResult {
 }
 
 export const defineComponentDocumentation = <Props>(
-  page: ComponentDocumentationPage<Props>,
-) => page;
+  page: Omit<ComponentDocumentationPage<Props>, "kind">,
+): ComponentDocumentationPage<Props> => ({
+  ...page,
+  kind: "page",
+});

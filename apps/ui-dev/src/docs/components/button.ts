@@ -1,4 +1,5 @@
 import type { ButtonProps } from "@monorepo/ui";
+import { DocumentationPlaceholder } from "../../components/DocumentationPlaceholder/DocumentationPlaceholder";
 import { defineComponentDocumentation } from "../schema";
 
 type ButtonPlaygroundProps = Pick<
@@ -14,6 +15,7 @@ export const buttonDocumentation =
     summary: "Activa una acción desde una interfaz.",
     tags: ["acción", "interacción", "botón"],
     route: "/componentes/button",
+    Content: DocumentationPlaceholder,
     examples: [
       {
         title: "Acción principal",

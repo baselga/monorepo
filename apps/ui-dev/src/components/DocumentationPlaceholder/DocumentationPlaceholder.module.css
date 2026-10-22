@@ -1,0 +1,17 @@
+.placeholder {
+  margin-block-start: var(--space-12);
+  padding: var(--space-6);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.placeholder h2 {
+  margin: 0;
+  font: var(--type-heading-sm);
+}
+
+.placeholder p {
+  margin-block: var(--space-3) 0;
+  color: var(--text-secondary);
+}

@@ -25,24 +25,6 @@
   line-height: var(--line-height-relaxed);
 }
 
-.contentPlaceholder {
-  margin-block-start: var(--space-12);
-  padding: var(--space-6);
-  border: var(--border-width-thin) solid var(--border-default);
-  border-radius: var(--radius-md);
-  background: var(--bg-surface);
-}
-
-.contentPlaceholder h2 {
-  margin: 0;
-  font: var(--type-heading-sm);
-}
-
-.contentPlaceholder p {
-  margin-block: var(--space-3) 0;
-  color: var(--text-secondary);
-}
-
 @media (max-width: 48rem) {
   .mainContent {
     padding: var(--space-8) var(--space-4);

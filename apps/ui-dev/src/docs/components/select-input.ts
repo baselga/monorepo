@@ -1,4 +1,5 @@
 import type { SelectInputProps } from "@monorepo/ui";
+import { DocumentationPlaceholder } from "../../components/DocumentationPlaceholder/DocumentationPlaceholder";
 import { defineComponentDocumentation } from "../schema";
 
 type SelectInputPlaygroundProps = Pick<
@@ -14,6 +15,7 @@ export const selectInputDocumentation =
     summary: "Permite seleccionar una opción de una lista.",
     tags: ["campo", "formulario", "selección", "lista"],
     route: "/componentes/select-input",
+    Content: DocumentationPlaceholder,
     examples: [
       {
         title: "Selección de idioma",

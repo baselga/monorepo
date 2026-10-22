@@ -1,0 +1,115 @@
+.lead {
+  margin-block: var(--space-4) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.lead + section {
+  margin-block-start: var(--space-8);
+}
+
+.lead ~ section {
+  margin-block-start: var(--space-12);
+}
+
+section h2 {
+  margin: 0;
+  font: var(--type-heading-sm);
+}
+
+section h2 + p,
+section h2 + .codeBlock,
+section h2 + .definitionList,
+section h2 + .colorExamples,
+section h2 + .guidanceList {
+  margin-block-start: var(--space-4);
+}
+
+section p {
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+}
+
+.codeBlock {
+  overflow-x: auto;
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.definitionList {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.definitionList div {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) minmax(0, 3fr);
+  gap: var(--space-4);
+  padding-block-end: var(--space-3);
+  border-block-end: var(--border-width-thin) solid var(--border-default);
+}
+
+.definitionList dt {
+  font: var(--type-label);
+}
+
+.definitionList dd {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.colorExamples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.colorExample {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.guidanceList {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding-inline-start: var(--space-6);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+section a {
+  display: inline-block;
+  margin-block-start: var(--space-4);
+  color: var(--text-brand);
+  font: var(--type-label);
+}
+
+section > section {
+  margin-block-start: var(--space-4);
+}
+
+section > section h3,
+section > section p {
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .definitionList div,
+  .colorExamples {
+    grid-template-columns: 1fr;
+  }
+}

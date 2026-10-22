@@ -1,4 +1,5 @@
 import type { TextInputProps } from "@monorepo/ui";
+import { DocumentationPlaceholder } from "../../components/DocumentationPlaceholder/DocumentationPlaceholder";
 import { defineComponentDocumentation } from "../schema";
 
 type TextInputPlaygroundProps = Pick<
@@ -14,6 +15,7 @@ export const textInputDocumentation =
     summary: "Permite introducir una única línea de texto.",
     tags: ["campo", "formulario", "entrada", "texto"],
     route: "/componentes/text-input",
+    Content: DocumentationPlaceholder,
     examples: [
       {
         title: "Campo de búsqueda",
