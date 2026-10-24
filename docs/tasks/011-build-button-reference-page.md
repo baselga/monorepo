@@ -1,4 +1,4 @@
-# Tarea: construir la página de referencia de Button
+# Tarea: construir la página de referencia de Button - completada
 
 ## Objetivo
 

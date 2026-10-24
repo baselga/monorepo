@@ -1,0 +1,110 @@
+.section {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.section > h2,
+.section > p,
+.section > ul {
+  margin: 0;
+}
+
+.section > h2 {
+  font: var(--type-heading-md);
+}
+
+.section > p,
+.section > ul {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.section > ul {
+  display: grid;
+  gap: var(--space-2);
+  padding-inline-start: var(--space-5);
+}
+
+.gallery {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.galleryGroup {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.galleryGroup h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font: var(--type-heading-sm);
+}
+
+.galleryButtons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.controls {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.control {
+  display: grid;
+  gap: var(--space-2);
+  color: var(--text-primary);
+  font: var(--type-label);
+}
+
+.control input {
+  inline-size: 100%;
+  min-block-size: var(--space-10);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font: var(--type-body);
+}
+
+.control input:focus-visible {
+  outline: var(--border-width-thin) solid var(--border-focus);
+  outline-offset: var(--space-1);
+}
+
+.checkboxControl {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-primary);
+  font: var(--type-body);
+}
+
+.checkboxControl input {
+  inline-size: var(--space-4);
+  block-size: var(--space-4);
+  accent-color: var(--bg-brand);
+}
+
+.activationStatus {
+  min-block-size: var(--space-5);
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.reactAriaLink {
+  color: var(--text-brand);
+  font: var(--type-label);
+}
+
+.reactAriaLink:focus-visible {
+  border-radius: var(--radius-sm);
+  outline: var(--border-width-thin) solid var(--border-focus);
+  outline-offset: var(--space-1);
+}
