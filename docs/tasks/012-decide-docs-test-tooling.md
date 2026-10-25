@@ -1,4 +1,4 @@
-# Tarea: decidir la infraestructura de pruebas de ui-dev
+# Tarea: decidir la infraestructura de pruebas de ui-dev — Completada
 
 ## Objetivo
 
