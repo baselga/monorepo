@@ -13,6 +13,7 @@
 
 ## Reglas obligatorias
 
+- Comunícate con el usuario en español; el código, los comentarios y los mensajes de commit van en inglés.
 - Usa tokens semánticos existentes para valores visuales; nunca escribas valores crudos de color, espacio, tipografía, borde o elevación.
 - Los estilos de componentes van en CSS Modules (`*.module.css`), no en hojas globales.
 - Todo componente de `packages/ui` debe incluir un test en `tests/components/`.
